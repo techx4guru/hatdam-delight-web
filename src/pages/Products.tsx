@@ -2,108 +2,79 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Star } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import premiumBread from "@/assets/premium-bread.jpg";
 import freshPastries from "@/assets/fresh-pastries.jpg";
 import premiumCakes from "@/assets/premium-cakes.jpg";
+import OrderModal from "@/components/OrderModal";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [orderModalOpen, setOrderModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState("");
 
   const categories = [
     { id: "all", name: "All Products" },
-    { id: "breads", name: "Breads" },
-    { id: "pastries", name: "Pastries" },
-    { id: "cakes", name: "Cakes" },
-    { id: "snacks", name: "Snacks" }
+    { id: "bread", name: "Premium Bread" },
+    { id: "special-bread", name: "Special Premium Bread" },
+    { id: "snacks", name: "Premium Snacks" },
+    { id: "chips", name: "Premium Chips" },
+    { id: "drinks", name: "Premium Special Drinks" }
   ];
 
   const products = [
-    {
-      id: 1,
-      name: "Premium Hatdam Bread",
-      category: "breads",
-      price: "₦700",
-      description: "Our signature artisanal bread with perfect crust and soft interior",
-      image: premiumBread,
-      rating: 5,
-      isSpecial: true
-    },
-    {
-      id: 2,
-      name: "Whole Wheat Loaf",
-      category: "breads",
-      price: "₦800",
-      description: "Nutritious whole wheat bread perfect for healthy living",
-      image: premiumBread,
-      rating: 5
-    },
-    {
-      id: 3,
-      name: "Butter Croissants",
-      category: "pastries",
-      price: "₦300",
-      description: "Flaky, buttery croissants baked to golden perfection",
-      image: freshPastries,
-      rating: 5
-    },
-    {
-      id: 4,
-      name: "Danish Pastries",
-      category: "pastries",
-      price: "₦400",
-      description: "Sweet Danish pastries with fruit fillings",
-      image: freshPastries,
-      rating: 4
-    },
-    {
-      id: 5,
-      name: "Birthday Cake",
-      category: "cakes",
-      price: "₦5,000",
-      description: "Custom birthday cakes with personalized decorations",
-      image: premiumCakes,
-      rating: 5
-    },
-    {
-      id: 6,
-      name: "Wedding Cake",
-      category: "cakes",
-      price: "₦15,000",
-      description: "Elegant multi-tier wedding cakes for your special day",
-      image: premiumCakes,
-      rating: 5
-    },
-    {
-      id: 7,
-      name: "Meat Pies",
-      category: "snacks",
-      price: "₦250",
-      description: "Savory meat pies with seasoned beef filling",
-      image: freshPastries,
-      rating: 4
-    },
-    {
-      id: 8,
-      name: "Sausage Rolls",
-      category: "snacks",
-      price: "₦200",
-      description: "Crispy pastry rolls filled with seasoned sausage",
-      image: freshPastries,
-      rating: 4
-    }
+    // Premium Bread
+    { id: 1, name: "Butter bread (loaf)", category: "bread", image: premiumBread },
+    { id: 2, name: "Burger bread", category: "bread", image: premiumBread },
+    { id: 3, name: "Wheat bread", category: "bread", image: premiumBread },
+    
+    // Special Premium Bread
+    { id: 4, name: "Sardine bread", category: "special-bread", image: premiumBread },
+    { id: 5, name: "Coconut bread", category: "special-bread", image: premiumBread },
+    { id: 6, name: "Chocolate bread", category: "special-bread", image: premiumBread },
+    { id: 7, name: "Peanut bread", category: "special-bread", image: premiumBread },
+    { id: 8, name: "Milk bread", category: "special-bread", image: premiumBread },
+    
+    // Premium Snacks
+    { id: 9, name: "Meatpie", category: "snacks", image: freshPastries },
+    { id: 10, name: "Chicken pie", category: "snacks", image: freshPastries },
+    { id: 11, name: "Chicken Puff", category: "snacks", image: freshPastries },
+    { id: 12, name: "Sausage roll", category: "snacks", image: freshPastries },
+    { id: 13, name: "Hot dog bread", category: "snacks", image: freshPastries },
+    { id: 14, name: "Fantasy", category: "snacks", image: freshPastries },
+    { id: 15, name: "Super roll", category: "snacks", image: freshPastries },
+    { id: 16, name: "Vegetable Roll", category: "snacks", image: freshPastries },
+    { id: 17, name: "Pizza Roll", category: "snacks", image: freshPastries },
+    { id: 18, name: "Hatdam Special", category: "snacks", image: freshPastries },
+    { id: 19, name: "Doughnuts (jam)", category: "snacks", image: freshPastries },
+    { id: 20, name: "Doughnuts (Milky)", category: "snacks", image: freshPastries },
+    { id: 21, name: "Doughnuts (Ring)", category: "snacks", image: freshPastries },
+    
+    // Premium Chips
+    { id: 22, name: "Plantain chip (ripe)", category: "chips", image: premiumCakes },
+    { id: 23, name: "Plantain chips (unripe)", category: "chips", image: premiumCakes },
+    { id: 24, name: "Chin chin", category: "chips", image: premiumCakes },
+    { id: 25, name: "Groundnut Cake", category: "chips", image: premiumCakes },
+    { id: 26, name: "Coconut candy", category: "chips", image: premiumCakes },
+    { id: 27, name: "Groundnut", category: "chips", image: premiumCakes },
+    { id: 28, name: "Peanut", category: "chips", image: premiumCakes },
+    { id: 29, name: "Cashew nut", category: "chips", image: premiumCakes },
+    
+    // Premium Special Drinks
+    { id: 30, name: "Tiger nut", category: "drinks", image: premiumCakes },
+    { id: 31, name: "Fura Yoghurt", category: "drinks", image: premiumCakes },
+    { id: 32, name: "Coconut milk", category: "drinks", image: premiumCakes },
+    { id: 33, name: "Zobo", category: "drinks", image: premiumCakes },
+    { id: 34, name: "Pineapple & Ginger juice", category: "drinks", image: premiumCakes }
   ];
 
   const filteredProducts = selectedCategory === "all" 
     ? products 
     : products.filter(product => product.category === selectedCategory);
 
-  const handleOrder = (productName: string, price: string) => {
-    const message = encodeURIComponent(
-      `Hello! I'd like to order: ${productName} (${price}). Please let me know the next steps.`
-    );
-    const whatsappUrl = `https://wa.me/2348068404427?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+  const handleOrder = (productName: string) => {
+    setSelectedProduct(productName);
+    setOrderModalOpen(true);
   };
 
   return (
@@ -120,7 +91,7 @@ const Products = () => {
             <span className="text-secondary block">Products</span>
           </h1>
           <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto animate-slide-up">
-            From artisanal breads to delicate pastries, every product is crafted with passion and precision.
+            From premium breads to delicious snacks, every product is crafted with passion and precision.
           </p>
         </div>
       </section>
@@ -130,7 +101,7 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-2xl font-heading font-bold text-secondary-foreground mb-2">
-              🌟 Today's Special: Premium Hatdam Bread
+              🌟 Today's Special: Fresh Baked Goods
             </h2>
             <p className="text-secondary-foreground/90">
               Fresh from the oven every morning - Limited quantity available!
@@ -170,31 +141,16 @@ const Products = () => {
                       alt={product.name}
                       className="w-full h-48 object-cover"
                     />
-                    {product.isSpecial && (
-                      <Badge className="absolute top-3 left-3 bg-secondary gold-shimmer">
-                        Daily Special
-                      </Badge>
-                    )}
-                    <div className="absolute top-3 right-3 flex items-center space-x-1 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1">
-                      <Star size={14} className="text-yellow-400 fill-current" />
-                      <span className="text-xs font-medium">{product.rating}</span>
-                    </div>
                   </div>
                 </CardHeader>
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-heading font-semibold text-primary mb-2">
+                  <h3 className="text-lg font-heading font-semibold text-primary mb-4">
                     {product.name}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    {product.description}
-                  </p>
-                  <div className="text-2xl font-bold text-secondary">
-                    {product.price}
-                  </div>
                 </CardContent>
                 <CardFooter className="p-4 pt-0">
                   <Button 
-                    onClick={() => handleOrder(product.name, product.price)}
+                    onClick={() => handleOrder(product.name)}
                     className="w-full bg-secondary hover:bg-secondary-dark text-secondary-foreground"
                   >
                     <ShoppingCart size={16} className="mr-2" />
@@ -214,11 +170,11 @@ const Products = () => {
             Need Something Custom?
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            We specialize in custom orders for special occasions. Wedding cakes, birthday cakes, 
-            corporate events, and more. Let us create something special just for you.
+            We specialize in custom orders for special occasions. Corporate events, 
+            parties, and more. Let us create something special just for you.
           </p>
           <Button 
-            onClick={() => handleOrder("Custom Order Inquiry", "Custom Pricing")}
+            onClick={() => handleOrder("Custom Order Inquiry")}
             size="lg"
             className="gold-shimmer hover:scale-105 transition-transform"
           >
@@ -226,6 +182,12 @@ const Products = () => {
           </Button>
         </div>
       </section>
+
+      <OrderModal 
+        isOpen={orderModalOpen}
+        onClose={() => setOrderModalOpen(false)}
+        productName={selectedProduct}
+      />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import logoWhiteBg from "@/assets/logo-white-bg.jpg";
 
 export const Footer = () => {
   return (
@@ -8,15 +9,19 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="text-3xl font-heading font-bold text-secondary">
-                Hatdam
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src={logoWhiteBg} 
+                alt="hatdam bakery and pastry" 
+                className="h-12 w-auto rounded"
+              />
+              <div className="text-xl font-heading font-bold text-secondary">
+                hatdam bakery and pastry
               </div>
-              <div className="text-lg text-secondary-light">Bakery</div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
-              A bakery where every bite is a delight. We bring the finest artisanal breads, 
-              pastries, and cakes to your table with passion and quality.
+              A bakery where every bite is a delight. We bring the finest breads, 
+              pastries, snacks, chips and drinks to your table with passion and quality.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -103,7 +108,7 @@ export const Footer = () => {
         <div className="border-t border-primary-light mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              © 2024 Hatdam Bakery. All rights reserved.
+              © 2024 hatdam bakery and pastry. All rights reserved.
             </p>
             <p className="text-muted-foreground text-sm mt-2 md:mt-0">
               Made with ❤️ for delicious moments

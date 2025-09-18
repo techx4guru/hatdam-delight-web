@@ -14,16 +14,16 @@ All colors MUST be HSL.
     --foreground: 220 30% 15%;
 
     /* Deep Navy Blue - Primary Brand Color */
-    --primary: 220 40% 15%;
+    --primary: 240 70% 25%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 220 35% 25%;
-    --primary-dark: 220 45% 8%;
+    --primary-light: 240 50% 45%;
+    --primary-dark: 240 80% 15%;
 
-    /* Golden Yellow - Accent & CTAs */
-    --secondary: 45 95% 58%;
-    --secondary-foreground: 220 40% 15%;
-    --secondary-light: 45 95% 68%;
-    --secondary-dark: 45 85% 48%;
+    /* Brand Green - Accent & CTAs */
+    --secondary: 140 70% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 140 60% 65%;
+    --secondary-dark: 140 80% 35%;
 
     /* Bread Brown & Warm Neutrals */
     --accent: 30 40% 75%;
@@ -53,10 +53,10 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Premium Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 40% 15%) 0%, hsl(220 35% 25%) 50%, hsl(25 50% 45%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 95% 58%) 0%, hsl(45 85% 48%) 100%);
-    --gradient-warm: linear-gradient(180deg, hsl(25 20% 95%) 0%, hsl(25 15% 90%) 100%);
-    --gradient-overlay: linear-gradient(180deg, rgba(220, 40, 15, 0.8) 0%, rgba(220, 35, 25, 0.6) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240 70% 25%) 0%, hsl(140 70% 45%) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(140 70% 45%) 0%, hsl(240 70% 25%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(210 10% 96%) 0%, hsl(200 20% 95%) 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
 
     /* Typography Scale */
     --font-heading: 'Playfair Display', serif;

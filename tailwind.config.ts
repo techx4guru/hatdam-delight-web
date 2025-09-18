@@ -35,9 +35,9 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        bread: {
-          DEFAULT: "hsl(var(--bread-brown))",
-          light: "hsl(var(--bread-light))",
+        brand: {
+          blue: "hsl(var(--brand-blue))",
+          green: "hsl(var(--brand-green))",
         },
         warm: {
           DEFAULT: "hsl(var(--warm-neutral))",
@@ -66,7 +66,7 @@ export default {
       },
       backgroundImage: {
         "gradient-hero": "var(--gradient-hero)",
-        "gradient-gold": "var(--gradient-gold)",
+        "gradient-brand": "var(--gradient-brand)",
         "gradient-warm": "var(--gradient-warm)",
         "gradient-overlay": "var(--gradient-overlay)",
       },

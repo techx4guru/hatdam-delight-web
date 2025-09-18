@@ -115,7 +115,7 @@ const Order = () => {
             <span className="text-secondary block">From Our Bakery</span>
           </h1>
           <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto animate-slide-up">
-            Fresh bread and pastries delivered to your doorstep or ready for pickup at our bakery.
+            Fresh bread, snacks, and drinks delivered to your doorstep or ready for pickup at our bakery.
           </p>
         </div>
       </section>
@@ -306,16 +306,10 @@ const Order = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span>Monday - Saturday</span>
-                      <span className="font-medium">6:00 AM - 8:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Sunday</span>
-                      <span className="font-medium">7:00 AM - 6:00 PM</span>
-                    </div>
-                  </div>
+            <div>
+              <p className="text-sm text-muted-foreground">Monday - Sunday</p>
+              <p className="font-medium">8:00 AM - 9:00 PM</p>
+            </div>
                 </CardContent>
               </Card>
 
