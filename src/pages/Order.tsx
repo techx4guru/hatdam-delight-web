@@ -24,14 +24,14 @@ const Order = () => {
   });
 
   const products = [
-    { id: "premium-bread", name: "Premium Hatdam Bread", price: "₦700" },
-    { id: "whole-wheat", name: "Whole Wheat Loaf", price: "₦800" },
-    { id: "croissants", name: "Butter Croissants", price: "₦300" },
-    { id: "danish", name: "Danish Pastries", price: "₦400" },
-    { id: "meat-pies", name: "Meat Pies", price: "₦250" },
-    { id: "sausage-rolls", name: "Sausage Rolls", price: "₦200" },
-    { id: "birthday-cake", name: "Birthday Cake", price: "₦5,000" },
-    { id: "custom-order", name: "Custom Order", price: "Variable" }
+    { id: "premium-bread", name: "Premium Hatdam Bread" },
+    { id: "whole-wheat", name: "Whole Wheat Loaf" },
+    { id: "croissants", name: "Butter Croissants" },
+    { id: "danish", name: "Danish Pastries" },
+    { id: "meat-pies", name: "Meat Pies" },
+    { id: "sausage-rolls", name: "Sausage Rolls" },
+    { id: "birthday-cake", name: "Birthday Cake" },
+    { id: "custom-order", name: "Custom Order" }
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -71,7 +71,7 @@ const Order = () => {
     if (selectedProducts.length > 0) {
       message += `*Products Ordered:*\n`;
       selectedProducts.forEach(product => {
-        message += `• ${product.name} - ${product.price}\n`;
+        message += `• ${product.name}\n`;
       });
       message += `\n`;
     }
@@ -194,9 +194,9 @@ const Order = () => {
                           <SelectValue placeholder="Choose delivery option" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="pickup">Pickup from Bakery (Free)</SelectItem>
-                          <SelectItem value="delivery-warri">Home Delivery within Warri (₦500)</SelectItem>
-                          <SelectItem value="delivery-delta">Delivery within Delta State (₦1,000)</SelectItem>
+                          <SelectItem value="pickup">Pickup from Bakery</SelectItem>
+                          <SelectItem value="delivery-warri">Home Delivery within Warri</SelectItem>
+                          <SelectItem value="delivery-delta">Delivery within Delta State</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -215,10 +215,7 @@ const Order = () => {
                               onCheckedChange={(checked) => handleProductChange(product.id, checked)}
                             />
                             <Label htmlFor={product.id} className="flex-1 cursor-pointer">
-                              <div className="flex justify-between items-center">
-                                <span className="font-medium">{product.name}</span>
-                                <span className="text-secondary font-bold">{product.price}</span>
-                              </div>
+                              <span className="font-medium">{product.name}</span>
                             </Label>
                           </div>
                         ))}
@@ -284,14 +281,14 @@ const Order = () => {
                     <CheckCircle size={20} className="text-green-500 mt-0.5" />
                     <div>
                       <p className="font-medium">Warri Delivery</p>
-                      <p className="text-sm text-muted-foreground">₦500 delivery fee</p>
+                      <p className="text-sm text-muted-foreground">Contact us for delivery rates</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle size={20} className="text-green-500 mt-0.5" />
                     <div>
                       <p className="font-medium">Delta State</p>
-                      <p className="text-sm text-muted-foreground">₦1,000 delivery fee</p>
+                      <p className="text-sm text-muted-foreground">Contact us for delivery rates</p>
                     </div>
                   </div>
                 </CardContent>

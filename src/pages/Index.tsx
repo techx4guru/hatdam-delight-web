@@ -173,8 +173,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Our signature artisanal bread with perfect golden crust and soft, fluffy interior. Baked fresh every morning.
                 </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-secondary">₦700</span>
+                <div className="flex justify-center">
                   <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
                     Order Now
                   </Button>
@@ -193,8 +192,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Buttery croissants, Danish pastries, and savory treats. Perfect for breakfast or afternoon snacks.
                 </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-secondary">From ₦200</span>
+                <div className="flex justify-center">
                   <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
                     Order Now
                   </Button>
@@ -213,8 +211,7 @@ const Index = () => {
                 <p className="text-muted-foreground mb-4">
                   Beautiful custom cakes for birthdays, weddings, and special celebrations. Made to order with love.
                 </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-secondary">From ₦5,000</span>
+                <div className="flex justify-center">
                   <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
                     Order Now
                   </Button>
