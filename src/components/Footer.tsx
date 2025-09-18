@@ -108,7 +108,7 @@ export const Footer = () => {
         <div className="border-t border-primary-light mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              © 2024 hatdam bakery and pastry. All rights reserved.
+              © 2025 hatdam bakery and pastry.TechX4 All rights reserved.
             </p>
             <p className="text-muted-foreground text-sm mt-2 md:mt-0">
               Made with ❤️ for delicious moments

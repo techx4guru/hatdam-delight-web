@@ -202,15 +202,15 @@ const Index = () => {
 
             <Card className="hover-lift border-none shadow-premium overflow-hidden">
               <div className="relative">
-                <img src={premiumCakes} alt="Custom Cakes" className="w-full h-64 object-cover" />
+                <img src={freshPastries} alt="Fresh Pastries" className="w-full h-64 object-cover" />
               </div>
               <CardHeader>
-                <CardTitle className="text-xl font-heading text-primary">Custom Cakes</CardTitle>
+                <CardTitle className="text-xl font-heading text-primary">Premium Hatdam Chips</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Beautiful custom cakes for birthdays, weddings, and special celebrations. Made to order with love.
-                </p>
+                  
+Crispy, flavorful chips made from the finest ingredients — perfect for snacking anytime. Carefully prepared to deliver taste and crunch in every bite.</p>
                 <div className="flex justify-center">
                   <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
                     Order Now
@@ -328,7 +328,7 @@ const Index = () => {
               </div>
               <div>
                 <h3 className="font-heading font-semibold text-lg mb-2">🕐 Hours</h3>
-                <p className="opacity-90">Daily: 6:00 AM - 8:00 PM</p>
+                <p className="opacity-90">Daily: 8:00 AM - 9:00 PM</p>
               </div>
             </div>
           </div>

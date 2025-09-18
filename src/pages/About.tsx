@@ -140,7 +140,7 @@ const About = () => {
               the artistry that goes into every product.
             </p>
             <p className="text-primary font-semibold">
-              Open Daily: 6:00 AM - 8:00 PM
+              Open Daily: 8:00 AM - 9:00 PM
             </p>
           </div>
         </div>

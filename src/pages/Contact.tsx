@@ -62,7 +62,7 @@ const Contact = () => {
   };
 
   const handleDirections = () => {
-    const address = "No 46, NNPC Housing Complex Road, Ekpan, Warri, Delta State, Nigeria";
+    const address = "hatdam bakery and pastry, No 46, NNPC Housing Complex Road, Ekpan, Warri, Delta State, Nigeria";
     const encodedAddress = encodeURIComponent(address);
     window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
   };
@@ -252,11 +252,11 @@ const Contact = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span>Monday - Saturday</span>
-                      <span className="font-medium">6:00 AM - 8:00 PM</span>
+                      <span className="font-medium">8:00 AM - 9:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Sunday</span>
-                      <span className="font-medium">7:00 AM - 6:00 PM</span>
+                      <span className="font-medium">8:00 AM - 9:00 PM</span>
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground mt-3">
@@ -302,7 +302,7 @@ const Contact = () => {
             </div>
             <div className="w-full h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4769089724757!2d5.7516!3d5.5164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1043f6a9b7b45e0d%3A0x1234567890abcdef!2sNo%2046%2C%20NNPC%20Housing%20Complex%20Road%2C%20Ekpan%2C%20Warri%2C%20Delta%20State%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1695123456789!5m2!1sen!2sng"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3971.050827349283!2d5.7404966!3d5.5594853!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041ad001041e01b%3A0x987871eecb5aae50!2shatdam%20bakery%20and%20pastry!5e0!3m2!1sen!2sng!4v1758206997984!5m2!1sen!2sng"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
