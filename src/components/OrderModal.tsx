@@ -1,6 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, FileText } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface OrderModalProps {
   isOpen: boolean;
@@ -9,23 +10,25 @@ interface OrderModalProps {
 }
 
 const OrderModal = ({ isOpen, onClose, productName }: OrderModalProps) => {
+  const navigate = useNavigate();
+
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
       `Hello! I'd like to order: ${productName}. Please let me know the price and availability.`
     );
     const whatsappUrl = `https://wa.me/2348068404427?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, "_blank");
     onClose();
   };
 
   const handleCall = () => {
-    window.open('tel:+2348068404427', '_self');
+    window.open("tel:+2348068404427", "_self");
     onClose();
   };
 
   const handleForm = () => {
-    // Navigate to order form page
-    window.location.href = '/order';
+    // Navigate to order form page with React Router
+    navigate("/order");
     onClose();
   };
 
@@ -41,7 +44,7 @@ const OrderModal = ({ isOpen, onClose, productName }: OrderModalProps) => {
           <p className="text-center text-muted-foreground">
             Choose your preferred way to place your order:
           </p>
-          
+
           <div className="space-y-3">
             <Button
               onClick={handleWhatsApp}
