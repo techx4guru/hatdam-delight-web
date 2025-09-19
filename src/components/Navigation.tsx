@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
-import logoTransparent from "@/assets/logo-transparent.png";
+import logoTransparent from "@/assets/logo-white-bg.jpg";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ export const Navigation = () => {
             <img 
               src={logoTransparent} 
               alt="hatdam bakery and pastry" 
-              className="h-12 w-auto"
+              className="h-12 w-auto rounded"
             />
             <div className="text-lg font-heading font-bold text-secondary">
               hatdam bakery and pastry
