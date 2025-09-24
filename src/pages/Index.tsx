@@ -101,13 +101,14 @@ const Index = () => {
               Order Now
             </Button>
             <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="text-lg px-8 py-4 glass-effect border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:scale-110 transition-all duration-300"
-            >
-              <Link to="/products">View Menu</Link>
-            </Button>
+  asChild
+  variant="outline"
+  size="lg"
+  className="text-lg px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-primary-foreground shadow-lg hover:bg-white/20 hover:scale-110 hover:shadow-xl transition-all duration-300"
+>
+  <Link to="/products">View Menu</Link>
+</Button>
+
           </div>
         </div>
 
@@ -314,14 +315,14 @@ Crispy, flavorful chips made from the finest ingredients — perfect for snackin
               <Phone size={20} className="mr-2" />
               Order Now via WhatsApp
             </Button>
-            <Button 
-              asChild
-              variant="outline"
-              size="lg"
-              className="text-lg px-8 py-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:scale-110 transition-all duration-300"
-            >
-              <Link to="/contact">Visit Our Bakery</Link>
-            </Button>
+<Button
+  asChild
+  variant="outline"
+  size="lg"
+  className="text-lg px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-primary-foreground shadow-lg hover:bg-white/20 hover:scale-110 hover:shadow-xl transition-all duration-300"
+>
+  <Link to="/contact">Visit Our Bakery</Link>
+</Button>
           </div>
 
           {/* Contact Info */}
