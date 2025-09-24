@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, MessageCircle, Twitter } from "lucide-react";
 import logoWhiteBg from "@/assets/logo-white-bg.jpg";
 
 export const Footer = () => {
@@ -25,21 +25,41 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com/hatdam_bakery" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2 bg-secondary/20 rounded-full hover:bg-secondary/30 transition-colors"
-              >
-                <Instagram size={20} className="text-secondary" />
-              </a>
-              <a 
-                href="https://facebook.com/hatdam_bakery" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2 bg-secondary/20 rounded-full hover:bg-secondary/30 transition-colors"
-              >
-                <Facebook size={20} className="text-secondary" />
-              </a>
+  href="https://instagram.com/hatdam_bakery" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="p-2 bg-secondary/20 rounded-full hover:bg-secondary/30 transition-colors"
+>
+  <Instagram size={20} className="text-secondary" />
+</a>
+
+<a 
+  href="https://facebook.com/hatdam_bakery" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="p-2 bg-secondary/20 rounded-full hover:bg-secondary/30 transition-colors"
+>
+  <Facebook size={20} className="text-secondary" />
+</a>
+
+<a 
+  href="https://twitter.com/hatdam_bakery" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="p-2 bg-secondary/20 rounded-full hover:bg-secondary/30 transition-colors"
+>
+  <Twitter size={20} className="text-secondary" />
+</a>
+
+<a 
+  href="https://wa.me/2348068404427" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="p-2 bg-secondary/20 rounded-full hover:bg-secondary/30 transition-colors"
+>
+  <MessageCircle size={20} className="text-secondary" />
+</a>
+
             </div>
           </div>
 
