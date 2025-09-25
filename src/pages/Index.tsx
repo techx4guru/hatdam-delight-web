@@ -65,60 +65,53 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* ✅ FIX: removed parallax-bg, added safe bg styling */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroBakery})`,
-            backgroundAttachment: "scroll", // ensures it works on iOS
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-overlay" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+  {/* Gradient overlay for depth */}
+  <div className="absolute inset-0 bg-gradient-overlay" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="mb-8 bg-secondary/20 text-secondary border-secondary/30 animate-fade-in">
-            Fresh Daily Since Opening
-          </Badge>
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <Badge className="mb-8 bg-secondary/20 text-secondary border-secondary/30 animate-fade-in">
+      Fresh Daily Since Opening
+    </Badge>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-primary-foreground mb-6 animate-slide-up">
-            A bakery where every
-            <span className="text-secondary block animate-fade-in">
-              bite is a delight
-            </span>
-          </h1>
+    <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-primary-foreground mb-6 animate-slide-up">
+      A bakery where every
+      <span className="text-secondary block animate-fade-in">
+        bite is a delight
+      </span>
+    </h1>
 
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-4xl mx-auto mb-12 animate-fade-in">
-            Experience the finest artisanal breads, pastries, and cakes crafted
-            with passion in the heart of Warri, Delta State.
-          </p>
+    <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-4xl mx-auto mb-12 animate-fade-in">
+      Experience the finest artisanal breads, pastries, and cakes crafted
+      with passion in the heart of Warri, Delta State.
+    </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
-            <Button
-              onClick={handleOrderNow}
-              size="lg"
-              className="text-lg px-8 py-4 gold-shimmer hover:scale-110 transition-all duration-300 shadow-gold"
-            >
-              <Phone size={20} className="mr-2" />
-              Order Now
-            </Button>
-            <Button
-  asChild
-  variant="outline"
-  size="lg"
-  className="text-lg px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-primary-foreground shadow-lg hover:bg-white/20 hover:scale-110 hover:shadow-xl transition-all duration-300"
->
-  <Link to="/products">View Menu</Link>
-</Button>
+    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
+      <Button
+        onClick={handleOrderNow}
+        size="lg"
+        className="text-lg px-8 py-4 gold-shimmer hover:scale-110 transition-all duration-300 shadow-gold"
+      >
+        <Phone size={20} className="mr-2" />
+        Order Now
+      </Button>
+      <Button
+        asChild
+        variant="outline"
+        size="lg"
+        className="text-lg px-8 py-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 text-primary-foreground shadow-lg hover:bg-white/20 hover:scale-110 hover:shadow-xl transition-all duration-300"
+      >
+        <Link to="/products">View Menu</Link>
+      </Button>
+    </div>
+  </div>
 
-          </div>
-        </div>
+  {/* Floating Elements */}
+  <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <ChefHat size={32} className="text-secondary" />
+  </div>
+</section>
 
-        {/* Floating Elements */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChefHat size={32} className="text-secondary" />
-        </div>
-      </section>
 
       {/* ✅ Rest of your code stays unchanged */}
       {/* Features Section */}
