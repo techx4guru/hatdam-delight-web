@@ -129,7 +129,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 animate-fade-in">
                 Why Choose Hatdam Bakery?
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-slide-up">
+              <p className="text-lg text-foreground/80 max-w-2xl mx-auto animate-slide-up">
                 We're not just a bakery; we're a tradition of excellence that
                 brings joy to every table.
               </p>
@@ -148,7 +148,7 @@ const Index = () => {
                     <h3 className="text-xl font-heading font-semibold mb-3">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <p className="text-foreground/80">{feature.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -168,7 +168,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                 Premium Products Made Fresh Daily
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
                 From our signature Hatdam bread to elegant custom cakes, every product reflects our commitment to quality and taste.
               </p>
             </div>
@@ -185,7 +185,7 @@ const Index = () => {
                   <CardTitle className="text-xl font-heading">Premium Hatdam Bread</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-foreground/80 mb-4">
                     Our signature artisanal bread with perfect golden crust and soft, fluffy interior. Baked fresh every morning.
                   </p>
                   <div className="flex justify-center">
@@ -204,7 +204,7 @@ const Index = () => {
                   <CardTitle className="text-xl font-heading">Fresh Pastries</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-foreground/80 mb-4">
                     Buttery croissants, Danish pastries, and savory treats. Perfect for breakfast or afternoon snacks.
                   </p>
                   <div className="flex justify-center">
@@ -223,7 +223,7 @@ const Index = () => {
                   <CardTitle className="text-xl font-heading">Premium Hatdam Chips</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-foreground/80 mb-4">
                     Crispy, flavorful chips made from the finest ingredients — perfect for snacking anytime. Carefully prepared to deliver taste and crunch in every bite.
                   </p>
                   <div className="flex justify-center">
@@ -274,7 +274,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                 What Our Customers Say
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-foreground/80">
                 Join thousands of satisfied customers across Delta State
               </p>
             </div>
@@ -288,12 +288,12 @@ const Index = () => {
                         <Star key={i} size={20} className="text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-600 mb-6 italic">
+                    <p className="text-foreground/80 mb-6 italic">
                       "{testimonial.text}"
                     </p>
                     <div>
-                      <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-gray-500">{testimonial.location}</p>
+                      <p className="font-semibold text-foreground">{testimonial.name}</p>
+                      <p className="text-sm text-foreground/60">{testimonial.location}</p>
                     </div>
                   </CardContent>
                 </Card>

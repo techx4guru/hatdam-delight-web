@@ -15,11 +15,11 @@ export const Footer = () => {
                 alt="hatdam bakery and pastry" 
                 className="h-12 w-auto rounded"
               />
-              <div className="text-xl font-heading font-bold text-white">
+              <div className="text-xl font-heading font-bold text-foreground">
                 hatdam bakery and pastry
               </div>
             </div>
-            <p className="text-white/80 mb-6 max-w-md">
+            <p className="text-foreground/80 mb-6 max-w-md">
               A bakery where every bite is a delight. We bring the finest breads, 
               pastries, snacks, chips and drinks to your table with passion and quality.
             </p>
@@ -64,32 +64,32 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-heading font-semibold text-white mb-4">
+            <h3 className="text-lg font-heading font-semibold text-foreground mb-4">
               Quick Links
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-white/80 hover:text-secondary transition-colors hover:underline">
+                <Link to="/" className="text-foreground/80 hover:text-secondary transition-colors hover:underline">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-white/80 hover:text-secondary transition-colors hover:underline">
+                <Link to="/about" className="text-foreground/80 hover:text-secondary transition-colors hover:underline">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="text-white/80 hover:text-secondary transition-colors hover:underline">
+                <Link to="/products" className="text-foreground/80 hover:text-secondary transition-colors hover:underline">
                   Products
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="text-white/80 hover:text-secondary transition-colors hover:underline">
+                <Link to="/gallery" className="text-foreground/80 hover:text-secondary transition-colors hover:underline">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link to="/order" className="text-white/80 hover:text-secondary transition-colors hover:underline">
+                <Link to="/order" className="text-foreground/80 hover:text-secondary transition-colors hover:underline">
                   Order Online
                 </Link>
               </li>
@@ -98,27 +98,27 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-heading font-semibold text-white mb-4">
+            <h3 className="text-lg font-heading font-semibold text-foreground mb-4">
               Contact Info
             </h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <MapPin size={20} className="text-secondary mt-0.5" />
-                <div className="text-white/80">
+                <div className="text-foreground/80">
                   <p>No 46, NNPC Housing Complex Road,</p>
                   <p>Ekpan, Warri, Delta State</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={20} className="text-secondary" />
-                <div className="text-white/80">
+                <div className="text-foreground/80">
                   <p>08068404427</p>
                   <p>08033527313</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={20} className="text-secondary" />
-                <p className="text-white/80">info@hatdambakery.com</p>
+                <p className="text-foreground/80">info@hatdambakery.com</p>
               </div>
             </div>
           </div>
@@ -126,10 +126,10 @@ export const Footer = () => {
 
         <div className="border-t border-primary-light mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/80 text-sm">
+            <p className="text-foreground/80 text-sm">
               © 2025 hatdam bakery and pastry.TechX4 All rights reserved.
             </p>
-            <p className="text-white/80 text-sm mt-2 md:mt-0">
+            <p className="text-foreground/80 text-sm mt-2 md:mt-0">
               Made with ❤️ for delicious moments
             </p>
           </div>
