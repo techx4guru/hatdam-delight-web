@@ -113,7 +113,7 @@ const Products = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8">
+      <section className="py-8 bg-warm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
@@ -131,11 +131,11 @@ const Products = () => {
       </section>
 
       {/* Products Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {filteredProducts.map((product) => (
-              <Card key={product.id} className="hover-lift border border-secondary/30 overflow-hidden">
+              <Card key={product.id} className="hover-lift shadow-soft border-none overflow-hidden">
                 <CardHeader className="p-0">
                   <div className="relative">
                     <img 
@@ -146,14 +146,14 @@ const Products = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-heading font-semibold text-foreground mb-4">
+                  <h3 className="text-lg font-heading font-semibold text-primary mb-4">
                     {product.name}
                   </h3>
                 </CardContent>
                 <CardFooter className="p-4 pt-0">
                   <Button 
                     onClick={() => handleOrder(product.name)}
-                    className="w-full"
+                    className="w-full bg-secondary hover:bg-secondary-dark text-secondary-foreground"
                   >
                     <ShoppingCart size={16} className="mr-2" />
                     Order Now
@@ -166,24 +166,22 @@ const Products = () => {
       </section>
 
       {/* Custom Orders Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-warm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="content-section">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-              Need Something Custom?
-            </h2>
-            <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-8">
-              We specialize in custom orders for special occasions. Corporate events, 
-              parties, and more. Let us create something special just for you.
-            </p>
-            <Button 
-              onClick={() => handleOrder("Custom Order Inquiry")}
-              size="lg"
-              className="hover:scale-105 transition-transform"
-            >
-              Request Custom Order
-            </Button>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
+            Need Something Custom?
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+            We specialize in custom orders for special occasions. Corporate events, 
+            parties, and more. Let us create something special just for you.
+          </p>
+          <Button 
+            onClick={() => handleOrder("Custom Order Inquiry")}
+            size="lg"
+            className="gold-shimmer hover:scale-105 transition-transform"
+          >
+            Request Custom Order
+          </Button>
         </div>
       </section>
 

@@ -9,21 +9,21 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Brand Colors - Deep Navy Blue Theme */
-    --background: 220 60% 13%;
-    --foreground: 0 0% 100%;
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 30% 15%;
 
-    /* Deep Navy Blue - Main Background */
-    --primary: 220 60% 13%;
+    /* Deep Navy Blue - Primary Brand Color */
+    --primary: 240 70% 25%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 220 60% 20%;
-    --primary-dark: 220 70% 8%;
+    --primary-light: 240 50% 45%;
+    --primary-dark: 240 80% 15%;
 
-    /* Hatdam Green - CTAs & Accents */
-    --secondary: 135 60% 40%;
+    /* Brand Green - Accent & CTAs */
+    --secondary: 140 70% 45%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 135 50% 55%;
-    --secondary-dark: 135 70% 30%;
+    --secondary-light: 140 60% 65%;
+    --secondary-dark: 140 80% 35%;
 
     /* Bread Brown & Warm Neutrals */
     --accent: 30 40% 75%;
@@ -33,29 +33,29 @@ All colors MUST be HSL.
     --warm-neutral: 25 20% 85%;
 
     /* Card & Interface Elements */
-    --card: 220 60% 13%;
-    --card-foreground: 0 0% 100%;
-    --card-navy: 220 60% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+    --card-navy: 220 40% 15%;
 
-    --popover: 220 60% 13%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
 
-    --muted: 220 50% 18%;
-    --muted-foreground: 0 0% 80%;
+    --muted: 25 20% 95%;
+    --muted-foreground: 220 15% 45%;
 
     --destructive: 0 65% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 135 60% 40%;
-    --input: 220 50% 18%;
+    --border: 25 15% 90%;
+    --input: 25 15% 95%;
     --ring: 45 95% 58%;
 
     --radius: 0.75rem;
 
-    /* Deep Navy Blue Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 60% 13%) 0%, hsl(220 60% 13%) 100%);
-    --gradient-brand: linear-gradient(135deg, hsl(135 60% 40%) 0%, hsl(220 60% 13%) 100%);
-    --gradient-warm: linear-gradient(180deg, hsl(220 60% 13%) 0%, hsl(220 60% 13%) 100%);
+    /* Premium Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 70% 25%) 0%, hsl(140 70% 45%) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(140 70% 45%) 0%, hsl(240 70% 25%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(210 10% 96%) 0%, hsl(200 20% 95%) 100%);
     --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
 
     /* Typography Scale */
@@ -110,33 +110,20 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply text-foreground;
-    background: var(--gradient-hero);
-    background-attachment: fixed;
+    @apply bg-background text-foreground;
     font-family: var(--font-body);
     font-weight: 400;
     line-height: 1.6;
-    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.2;
-    color: hsl(var(--foreground));
   }
 }
 
 @layer components {
-  /* Content Cards for Navy Backgrounds */
-  .content-card {
-    @apply bg-primary text-foreground rounded-xl border border-secondary/30 p-6 md:p-8 mb-6;
-  }
-
-  .content-section {
-    @apply bg-primary text-foreground rounded-xl border border-secondary/30 p-8 md:p-12 mb-8;
-  }
-
   /* Premium Animations */
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
