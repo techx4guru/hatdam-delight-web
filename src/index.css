@@ -9,21 +9,21 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 220 30% 15%;
+    /* Core Brand Colors - New Hatdam Packaging Theme */
+    --background: 200 50% 95%;
+    --foreground: 0 0% 20%;
 
-    /* Deep Navy Blue - Primary Brand Color */
-    --primary: 240 70% 25%;
+    /* Hatdam Dark Blue - Headings & Footer */
+    --primary: 230 60% 30%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 240 50% 45%;
-    --primary-dark: 240 80% 15%;
+    --primary-light: 230 50% 45%;
+    --primary-dark: 230 70% 20%;
 
-    /* Brand Green - Accent & CTAs */
-    --secondary: 140 70% 45%;
+    /* Hatdam Green - CTAs & Accents */
+    --secondary: 135 60% 40%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 140 60% 65%;
-    --secondary-dark: 140 80% 35%;
+    --secondary-light: 135 50% 55%;
+    --secondary-dark: 135 70% 30%;
 
     /* Bread Brown & Warm Neutrals */
     --accent: 30 40% 75%;
@@ -52,9 +52,9 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Premium Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(240 70% 25%) 0%, hsl(140 70% 45%) 100%);
-    --gradient-brand: linear-gradient(135deg, hsl(140 70% 45%) 0%, hsl(240 70% 25%) 100%);
+    /* Hatdam Packaging Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(200 50% 85%) 0%, hsl(180 40% 75%) 50%, hsl(135 60% 80%) 100%);
+    --gradient-brand: linear-gradient(135deg, hsl(135 60% 40%) 0%, hsl(230 60% 30%) 100%);
     --gradient-warm: linear-gradient(180deg, hsl(210 10% 96%) 0%, hsl(200 20% 95%) 100%);
     --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
 
@@ -110,20 +110,33 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: var(--gradient-hero);
+    background-attachment: fixed;
     font-family: var(--font-body);
     font-weight: 400;
     line-height: 1.6;
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.2;
+    color: hsl(var(--primary));
   }
 }
 
 @layer components {
+  /* Content Cards for White Backgrounds */
+  .content-card {
+    @apply bg-white rounded-xl shadow-soft p-6 md:p-8 mb-6;
+  }
+
+  .content-section {
+    @apply bg-white rounded-xl shadow-soft p-8 md:p-12 mb-8;
+  }
+
   /* Premium Animations */
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;

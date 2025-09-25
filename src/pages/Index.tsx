@@ -122,120 +122,124 @@ const Index = () => {
 
       {/* ✅ Rest of your code stays unchanged */}
       {/* Features Section */}
-      <section className="py-20 bg-warm">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4 animate-fade-in">
-              Why Choose Hatdam Bakery?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-slide-up">
-              We're not just a bakery; we're a tradition of excellence that
-              brings joy to every table.
-            </p>
-          </div>
+          <div className="content-section">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 animate-fade-in">
+                Why Choose Hatdam Bakery?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-slide-up">
+                We're not just a bakery; we're a tradition of excellence that
+                brings joy to every table.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card
-                key={index}
-                className="text-center hover-lift border-none shadow-soft"
-              >
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon size={32} className="text-secondary" />
-                  </div>
-                  <h3 className="text-xl font-heading font-semibold text-primary mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <Card
+                  key={index}
+                  className="text-center hover-lift border-none shadow-soft"
+                >
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <feature.icon size={32} className="text-secondary" />
+                    </div>
+                    <h3 className="text-xl font-heading font-semibold mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Products Highlight */}
-      <section className="py-20 bg-background">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-secondary/20 text-secondary border-secondary/30">
-              Our Specialties
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-              Premium Products Made Fresh Daily
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              From our signature Hatdam bread to elegant custom cakes, every product reflects our commitment to quality and taste.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <Card className="hover-lift border-none shadow-premium overflow-hidden">
-              <div className="relative">
-                <img src={butterbread} alt="Premium Hatdam Bread" className="w-full h-64 object-cover" />
-                <Badge className="absolute top-4 left-4 bg-secondary gold-shimmer">
-                  Best Seller
-                </Badge>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl font-heading text-primary">Premium Hatdam Bread</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Our signature artisanal bread with perfect golden crust and soft, fluffy interior. Baked fresh every morning.
-                </p>
-                <div className="flex justify-center">
-                  <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
-                    Order Now
-                  </Button>
+          <div className="content-section">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-secondary/20 text-secondary border-secondary/30">
+                Our Specialties
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+                Premium Products Made Fresh Daily
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                From our signature Hatdam bread to elegant custom cakes, every product reflects our commitment to quality and taste.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <Card className="hover-lift border-none shadow-premium overflow-hidden">
+                <div className="relative">
+                  <img src={butterbread} alt="Premium Hatdam Bread" className="w-full h-64 object-cover" />
+                  <Badge className="absolute top-4 left-4 bg-secondary gold-shimmer">
+                    Best Seller
+                  </Badge>
                 </div>
-              </CardContent>
-            </Card>
+                <CardHeader>
+                  <CardTitle className="text-xl font-heading">Premium Hatdam Bread</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Our signature artisanal bread with perfect golden crust and soft, fluffy interior. Baked fresh every morning.
+                  </p>
+                  <div className="flex justify-center">
+                    <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
+                      Order Now
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="hover-lift border-none shadow-premium overflow-hidden">
-              <div className="relative">
-                <img src={freshPastries} alt="Fresh Pastries" className="w-full h-64 object-cover" />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl font-heading text-primary">Fresh Pastries</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Buttery croissants, Danish pastries, and savory treats. Perfect for breakfast or afternoon snacks.
-                </p>
-                <div className="flex justify-center">
-                  <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
-                    Order Now
-                  </Button>
+              <Card className="hover-lift border-none shadow-premium overflow-hidden">
+                <div className="relative">
+                  <img src={freshPastries} alt="Fresh Pastries" className="w-full h-64 object-cover" />
                 </div>
-              </CardContent>
-            </Card>
+                <CardHeader>
+                  <CardTitle className="text-xl font-heading">Fresh Pastries</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Buttery croissants, Danish pastries, and savory treats. Perfect for breakfast or afternoon snacks.
+                  </p>
+                  <div className="flex justify-center">
+                    <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
+                      Order Now
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="hover-lift border-none shadow-premium overflow-hidden">
-              <div className="relative">
-                <img src={freshPastries} alt="Fresh Pastries" className="w-full h-64 object-cover" />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl font-heading text-primary">Premium Hatdam Chips</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  
-Crispy, flavorful chips made from the finest ingredients — perfect for snacking anytime. Carefully prepared to deliver taste and crunch in every bite.</p>
-                <div className="flex justify-center">
-                  <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
-                    Order Now
-                  </Button>
+              <Card className="hover-lift border-none shadow-premium overflow-hidden">
+                <div className="relative">
+                  <img src={freshPastries} alt="Fresh Pastries" className="w-full h-64 object-cover" />
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+                <CardHeader>
+                  <CardTitle className="text-xl font-heading">Premium Hatdam Chips</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Crispy, flavorful chips made from the finest ingredients — perfect for snacking anytime. Carefully prepared to deliver taste and crunch in every bite.
+                  </p>
+                  <div className="flex justify-center">
+                    <Button onClick={handleOrderNow} variant="outline" className="hover:bg-secondary hover:text-secondary-foreground">
+                      Order Now
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
 
-          <div className="text-center">
-            <Button asChild size="lg" className="gold-shimmer hover:scale-105 transition-transform">
-              <Link to="/products">View All Products</Link>
-            </Button>
+            <div className="text-center">
+              <Button asChild size="lg" className="hover:scale-105 transition-transform">
+                <Link to="/products">View All Products</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -263,36 +267,38 @@ Crispy, flavorful chips made from the finest ingredients — perfect for snackin
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-warm">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-              What Our Customers Say
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Join thousands of satisfied customers across Delta State
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover-lift border-none shadow-soft">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={20} className="text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-6 italic">
-                    "{testimonial.text}"
-                  </p>
-                  <div>
-                    <p className="font-semibold text-primary">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="content-section">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+                What Our Customers Say
+              </h2>
+              <p className="text-lg text-gray-600">
+                Join thousands of satisfied customers across Delta State
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="hover-lift border-none shadow-soft">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} size={20} className="text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <p className="text-gray-600 mb-6 italic">
+                      "{testimonial.text}"
+                    </p>
+                    <div>
+                      <p className="font-semibold">{testimonial.name}</p>
+                      <p className="text-sm text-gray-500">{testimonial.location}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
