@@ -6,6 +6,8 @@ import { Star, Clock, Shield, Heart, Phone, ChefHat, Award } from "lucide-react"
 import heroBakery from "@/assets/hero-bakery.jpg";
 import premiumBread from "@/assets/premium-bread.jpg";
 import freshPastries from "@/assets/fresh-pastries.jpg";
+import butterbread from "@/assets/butter-bread.jpg";
+import burgerraed from "@/assets/burger-bread.jpg";
 
 const Index = () => {
   const handleOrderNow = () => {
@@ -171,7 +173,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <Card className="hover-lift border-none shadow-premium overflow-hidden">
               <div className="relative">
-                <img src={premiumBread} alt="Premium Hatdam Bread" className="w-full h-64 object-cover" />
+                <img src={butterbread} alt="Premium Hatdam Bread" className="w-full h-64 object-cover" />
                 <Badge className="absolute top-4 left-4 bg-secondary gold-shimmer">
                   Best Seller
                 </Badge>

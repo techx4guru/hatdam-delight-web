@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
 import premiumBread from "@/assets/premium-bread.jpg";
 import freshPastries from "@/assets/fresh-pastries.jpg";
+import butterbread from "@/assets/butter-bread.jpg";
+import burgerraed from "@/assets/burger-bread.jpg";
 import premiumCakes from "@/assets/premium-cakes.jpg";
 import OrderModal from "@/components/OrderModal";
 
@@ -24,8 +26,8 @@ const Products = () => {
 
   const products = [
     // Premium Bread
-    { id: 1, name: "Butter bread (loaf)", category: "bread", image: premiumBread },
-    { id: 2, name: "Burger bread", category: "bread", image: premiumBread },
+    { id: 1, name: "Butter bread (loaf)", category: "bread", image: butterbread },
+    { id: 2, name: "Burger bread", category: "bread", image: burgerraed },
     { id: 3, name: "Wheat bread", category: "bread", image: premiumBread },
     
     // Special Premium Bread

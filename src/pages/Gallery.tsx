@@ -7,6 +7,8 @@ import premiumBread from "@/assets/premium-bread.jpg";
 import freshPastries from "@/assets/fresh-pastries.jpg";
 import premiumCakes from "@/assets/premium-cakes.jpg";
 import heroBakery from "@/assets/hero-bakery.jpg";
+import butterbread from "@/assets/butter-bread.jpg";
+import burgerraed from "@/assets/burger-bread.jpg";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -24,7 +26,7 @@ const Gallery = () => {
     {
       id: 1,
       category: "breads",
-      image: premiumBread,
+      image: butterbread,
       title: "Premium Hatdam Bread",
       description: "Our signature artisanal bread with perfect golden crust",
       likes: 127
