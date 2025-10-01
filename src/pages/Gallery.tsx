@@ -9,6 +9,9 @@ import premiumCakes from "@/assets/premium-cakes.jpg";
 import heroBakery from "@/assets/hero-bakery.jpg";
 import butterbread from "@/assets/butter-bread.jpg";
 import burgerraed from "@/assets/burger-bread.jpg";
+import hotdog from "@/assets/hotdog.jpg";
+import coconutbread from "@/assets/coconutbread.jpg";
+import sardine from "@/assets/sardine.jpg";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -23,6 +26,38 @@ const Gallery = () => {
   ];
 
   const galleryItems = [
+    {
+      id: 1,
+      category: "breads",
+      image: butterbread,
+      title: "Premium Hatdam Bread",
+      description: "Our signature artisanal bread with perfect golden crust",
+      likes: 127
+    },
+    {
+      id: 2,
+      category: "breads",
+      image: coconutbread,
+      title: "Premium Hatdam Coconutbread Bread",
+      description: "Our signature artisanal bread with perfect golden crust",
+      likes: 127
+    },
+    {
+      id: 3,
+      category: "breads",
+      image: sardine,
+      title: "Premium Hatdam Sardine Bread",
+      description: "Our signature artisanal bread with perfect golden crust",
+      likes: 127
+    },
+    {
+      id: 4,
+      category: "breads",
+      image: burgerraed,
+      title: "Premium Hatdam Bread",
+      description: "Our signature artisanal bread with perfect golden crust",
+      likes: 127
+    },
     {
       id: 1,
       category: "breads",

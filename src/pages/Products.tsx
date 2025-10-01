@@ -6,6 +6,9 @@ import { ShoppingCart } from "lucide-react";
 import premiumBread from "@/assets/premium-bread.jpg";
 import freshPastries from "@/assets/fresh-pastries.jpg";
 import butterbread from "@/assets/butter-bread.jpg";
+import hotdog from "@/assets/hotdog.jpg";
+import coconutbread from "@/assets/coconutbread.jpg";
+import sardine from "@/assets/sardine.jpg";
 import burgerraed from "@/assets/burger-bread.jpg";
 import premiumCakes from "@/assets/premium-cakes.jpg";
 import OrderModal from "@/components/OrderModal";
@@ -31,8 +34,8 @@ const Products = () => {
     { id: 3, name: "Wheat bread", category: "bread", image: premiumBread },
     
     // Special Premium Bread
-    { id: 4, name: "Sardine bread", category: "special-bread", image: premiumBread },
-    { id: 5, name: "Coconut bread", category: "special-bread", image: premiumBread },
+    { id: 4, name: "Sardine bread", category: "special-bread", image: sardine },
+    { id: 5, name: "Coconut bread", category: "special-bread", image: coconutbread },
     { id: 6, name: "Chocolate bread", category: "special-bread", image: premiumBread },
     { id: 7, name: "Peanut bread", category: "special-bread", image: premiumBread },
     { id: 8, name: "Milk bread", category: "special-bread", image: premiumBread },
@@ -42,7 +45,7 @@ const Products = () => {
     { id: 10, name: "Chicken pie", category: "snacks", image: freshPastries },
     { id: 11, name: "Chicken Puff", category: "snacks", image: freshPastries },
     { id: 12, name: "Sausage roll", category: "snacks", image: freshPastries },
-    { id: 13, name: "Hot dog bread", category: "snacks", image: freshPastries },
+    { id: 13, name: "Hot dog bread", category: "snacks", image: hotdog },
     { id: 14, name: "Fantasy", category: "snacks", image: freshPastries },
     { id: 15, name: "Super roll", category: "snacks", image: freshPastries },
     { id: 16, name: "Vegetable Roll", category: "snacks", image: freshPastries },
