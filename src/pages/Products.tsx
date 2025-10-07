@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
 import premiumBread from "@/assets/premium-bread.jpg";
 import freshPastries from "@/assets/fresh-pastries.jpg";
+import donuts from "@/assets/donuts.jpg";
+import sausage from "@/assets/sausage.jpg";
+import superroll from "@/assets/super-roll.jpg";
 import butterbread from "@/assets/butter-bread.jpg";
 import hotdog from "@/assets/hotdog.jpg";
 import coconutbread from "@/assets/coconutbread.jpg";
@@ -44,14 +47,14 @@ const Products = () => {
     { id: 9, name: "Meatpie", category: "snacks", image: freshPastries },
     { id: 10, name: "Chicken pie", category: "snacks", image: freshPastries },
     { id: 11, name: "Chicken Puff", category: "snacks", image: freshPastries },
-    { id: 12, name: "Sausage roll", category: "snacks", image: freshPastries },
+    { id: 12, name: "Sausage roll", category: "snacks", image: sausage },
     { id: 13, name: "Hot dog bread", category: "snacks", image: hotdog },
     { id: 14, name: "Fantasy", category: "snacks", image: freshPastries },
-    { id: 15, name: "Super roll", category: "snacks", image: freshPastries },
+    { id: 15, name: "Super roll", category: "snacks", image: superroll },
     { id: 16, name: "Vegetable Roll", category: "snacks", image: freshPastries },
     { id: 17, name: "Pizza Roll", category: "snacks", image: freshPastries },
     { id: 18, name: "Hatdam Special", category: "snacks", image: freshPastries },
-    { id: 19, name: "Doughnuts (jam)", category: "snacks", image: freshPastries },
+    { id: 19, name: "Doughnuts (jam)", category: "snacks", image: donuts },
     { id: 20, name: "Doughnuts (Milky)", category: "snacks", image: freshPastries },
     { id: 21, name: "Doughnuts (Ring)", category: "snacks", image: freshPastries },
     

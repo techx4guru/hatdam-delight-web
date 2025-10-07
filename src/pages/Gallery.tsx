@@ -9,9 +9,16 @@ import premiumCakes from "@/assets/premium-cakes.jpg";
 import heroBakery from "@/assets/hero-bakery.jpg";
 import butterbread from "@/assets/butter-bread.jpg";
 import burgerraed from "@/assets/burger-bread.jpg";
-import hotdog from "@/assets/hotdog.jpg";
 import coconutbread from "@/assets/coconutbread.jpg";
 import sardine from "@/assets/sardine.jpg";
+import hotdog from "@/assets/hotdog.jpg";
+import donuts from "@/assets/donuts.jpg";
+import sausage from "@/assets/sausage.jpg";
+import superroll from "@/assets/super-roll.jpg";
+import sidedisplay from "@/assets/sidedisplay.jpg";
+import breads from "@/assets/breads.jpg";
+import displaystand from "@/assets/display-stand.jpg";
+
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -74,6 +81,62 @@ const Gallery = () => {
       description: "Buttery croissants and Danish pastries made fresh daily",
       likes: 89
     },
+     {
+    id: 1,
+    category: "snacks",
+    image: hotdog,
+    title: "Delicious Hotdog",
+    description: "Juicy sausage wrapped in soft bread and topped with sauces.",
+    likes: 120,
+  },
+  {
+    id: 2,
+    category: "pastries",
+    image: donuts,
+    title: "Sweet Donuts",
+    description: "Soft, sugary donuts that melt in your mouth.",
+    likes: 95,
+  },
+  {
+    id: 3,
+    category: "meat",
+    image: sausage,
+    title: "Grilled Sausage",
+    description: "Perfectly grilled sausages with a smoky flavor.",
+    likes: 110,
+  },
+  {
+    id: 4,
+    category: "rolls",
+    image: superroll,
+    title: "Super Roll",
+    description: "Stuffed roll packed with creamy filling and flavor.",
+    likes: 102,
+  },
+  {
+    id: 5,
+    category: "display",
+    image: sidedisplay,
+    title: "Side Display",
+    description: "Beautiful food display arrangement to attract customers.",
+    likes: 87,
+  },
+  {
+    id: 6,
+    category: "breads",
+    image: breads,
+    title: "Assorted Breads",
+    description: "Freshly baked loaves with a crispy crust and soft center.",
+    likes: 99,
+  },
+  {
+    id: 7,
+    category: "display",
+    image: displaystand,
+    title: "Display Stand",
+    description: "Elegant display stand showcasing pastries and snacks.",
+    likes: 75,
+  },
     {
       id: 3,
       category: "cakes",
