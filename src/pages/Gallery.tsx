@@ -18,6 +18,11 @@ import superroll from "@/assets/super-roll.jpg";
 import sidedisplay from "@/assets/sidedisplay.jpg";
 import breads from "@/assets/breads.jpg";
 import displaystand from "@/assets/display-stand.jpg";
+import meatpie from "@/assets/meatpie.jpg";
+import chickenpuff from "@/assets/chickenpuff.jpg";
+import chickenpie from "@/assets/chickenpie.jpg";
+import fantasy from "@/assets/fantasy.jpg";
+import pizzaroll from "@/assets/pizzaroll.jpg";
 
 
 const Gallery = () => {
@@ -65,6 +70,47 @@ const Gallery = () => {
       description: "Our signature artisanal bread with perfect golden crust",
       likes: 127
     },
+    {
+  id: 8,
+  category: "pastries",
+  image: meatpie,
+  title: "Tasty Meat Pie",
+  description: "Golden-brown pastry filled with spicy minced meat and veggies.",
+  likes: 92,
+},
+{
+  id: 9,
+  category: "pastries",
+  image: chickenpuff,
+  title: "Crispy Chicken Puff",
+  description: "Light and flaky puff stuffed with flavorful chicken filling.",
+  likes: 85,
+},
+{
+  id: 10,
+  category: "pastries",
+  image: chickenpie,
+  title: "Savory Chicken Pie",
+  description: "Rich, creamy chicken filling baked inside a buttery crust.",
+  likes: 98,
+},
+{
+  id: 11,
+  category: "pastries",
+  image: fantasy,
+  title: "Fantasy Delight",
+  description: "Sweet and creamy dessert pastry that tastes like a dream.",
+  likes: 101,
+},
+{
+  id: 12,
+  category: "pastries",
+  image: pizzaroll,
+  title: "Cheesy Pizza Roll",
+  description: "Soft pastry roll packed with melted cheese and tangy sauce.",
+  likes: 94,
+},
+
     {
       id: 1,
       category: "breads",

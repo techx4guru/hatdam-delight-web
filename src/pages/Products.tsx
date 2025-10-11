@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import OrderModal from "@/components/OrderModal";
 import { ShoppingCart } from "lucide-react";
 import premiumBread from "@/assets/premium-bread.jpg";
 import freshPastries from "@/assets/fresh-pastries.jpg";
@@ -14,7 +15,11 @@ import coconutbread from "@/assets/coconutbread.jpg";
 import sardine from "@/assets/sardine.jpg";
 import burgerraed from "@/assets/burger-bread.jpg";
 import premiumCakes from "@/assets/premium-cakes.jpg";
-import OrderModal from "@/components/OrderModal";
+import meatpie from "@/assets/meatpie.jpg";
+import chickenpuff from "@/assets/chickenpuff.jpg";
+import chickenpie from "@/assets/chickenpie.jpg";
+import fantasy from "@/assets/fantasy.jpg";
+import pizzaroll from "@/assets/pizzaroll.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -44,15 +49,15 @@ const Products = () => {
     { id: 8, name: "Milk bread", category: "special-bread", image: premiumBread },
     
     // Premium Snacks
-    { id: 9, name: "Meatpie", category: "snacks", image: freshPastries },
-    { id: 10, name: "Chicken pie", category: "snacks", image: freshPastries },
-    { id: 11, name: "Chicken Puff", category: "snacks", image: freshPastries },
+    { id: 9, name: "Meatpie", category: "snacks", image: meatpie },
+    { id: 10, name: "Chicken pie", category: "snacks", image: chickenpie },
+    { id: 11, name: "Chicken Puff", category: "snacks", image: chickenpuff },
     { id: 12, name: "Sausage roll", category: "snacks", image: sausage },
     { id: 13, name: "Hot dog bread", category: "snacks", image: hotdog },
-    { id: 14, name: "Fantasy", category: "snacks", image: freshPastries },
+    { id: 14, name: "Fantasy", category: "snacks", image: fantasy },
     { id: 15, name: "Super roll", category: "snacks", image: superroll },
     { id: 16, name: "Vegetable Roll", category: "snacks", image: freshPastries },
-    { id: 17, name: "Pizza Roll", category: "snacks", image: freshPastries },
+    { id: 17, name: "Pizza Roll", category: "snacks", image: pizzaroll },
     { id: 18, name: "Hatdam Special", category: "snacks", image: freshPastries },
     { id: 19, name: "Doughnuts (jam)", category: "snacks", image: donuts },
     { id: 20, name: "Doughnuts (Milky)", category: "snacks", image: freshPastries },
